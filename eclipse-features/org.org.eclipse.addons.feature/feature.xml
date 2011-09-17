@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.org.eclipse.addons"
+      label="ORG Add-ons Feature"
+      version="1.2.0.20090622183000-M1"
+      provider-name="ORG"
+      plugin="org.org.eclipse.addons.branding"
+      image="dws_banner.gif">
+   <install-handler/>
+
+   <description url="http://www.org-tools.org/eclipse-dws/index.html">
+      The ORG Add-ons feature contains specific additions to other plugins through extensions.
+   </description>
+
+   <copyright url="http://www.org-tools.org/eclipse-dws/copyright.html">
+      Copyright ORG 2007. See http://www.org-tools.org/eclipse-dws/copyright.html.
+   </copyright>
+
+   <license url="http://www.org-tools.org/eclipse-dws/license.html">
+      Licensed under the EPL.
+See http://www.org-tools.org/eclipse-dws/license.html.
+   </license>
+
+   <url>
+      <update label="ORG Tools Stable Releases" url="http://www.org-tools.org/updatesites/stable/3.3/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.org.eclipse.core.utils.platform"/>
+      <import plugin="org.org.eclipse.core.ui"/>
+      <import plugin="org.eclipse.search"/>
+      <import plugin="org.org.eclipse.core.utils.jdt"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed"/>
+      <import plugin="org.org.lib.maven2"/>
+      <import plugin="org.org.lib.repository.crawler"/>
+      <import plugin="org.eclipse.core.expressions"/>
+   </requires>
+
+   <plugin
+         id="org.org.eclipse.addons.dws"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.20090622183000-M1"
+         unpack="false"/>
+
+</feature>

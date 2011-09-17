@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Addons Branding Plug-in
+Bundle-SymbolicName: org.org.eclipse.addons.branding;singleton:=true
+Bundle-Version: 1.1.1.200905241200-GA
+Bundle-Vendor: ORG

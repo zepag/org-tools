@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CheatSheet Feature Branding Plug-in
+Bundle-SymbolicName: org.org.eclipse.cheatsheet;singleton:=true
+Bundle-Version: 1.2.0.20090622183000-M1
+Bundle-Vendor: ORG
+Require-Bundle: org.eclipse.ui

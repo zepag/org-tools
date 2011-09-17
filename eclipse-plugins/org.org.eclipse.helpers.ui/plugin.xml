@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="org.org.eclipse.helpers.core.ConvertToWSTFacetedProjectCommand"
+               label="Convert to WST Faceted Project">
+               <visibleWhen>
+               		<and>
+                    <with variable="activePartId">
+                    	<or>
+          					<equals value="org.eclipse.ui.navigator.ProjectExplorer"/>
+          					<equals value="org.eclipse.jdt.ui.PackageExplorer"/>
+          					<equals value="org.eclipse.ui.views.ResourceNavigator"/>
+          				</or>
+       				</with>
+				    <iterate
+                          ifEmpty="false"
+                          operator="and">
+	                    	<not>
+	                    		<adapt type="org.eclipse.core.resources.IResource">
+		                			<test property="org.eclipse.core.resources.projectNature" value="org.eclipse.wst.common.project.facet.core.nature" >
+		   							</test>
+		                		</adapt>
+	                    	</not>
+               		</iterate>
+               		</and>
+               </visibleWhen>
+         </command>
+         <command
+               commandId="org.org.eclipse.helpers.core.OpenWSTFacetsWizardCommand"
+               label="Open WST Facets Wizard">
+               <visibleWhen>
+               		<and>
+                    <with variable="activePartId">
+                    	<or>
+          					<equals value="org.eclipse.ui.navigator.ProjectExplorer"/>
+          					<equals value="org.eclipse.jdt.ui.PackageExplorer"/>
+          					<equals value="org.eclipse.ui.views.ResourceNavigator"/>
+          				</or>
+       				</with>
+                    <iterate
+                          ifEmpty="false"
+                          operator="and">
+                		<adapt type="org.eclipse.core.resources.IResource">
+                    		<test property="org.eclipse.core.resources.projectNature" value="org.eclipse.wst.common.project.facet.core.nature" >
+       						</test>
+                		</adapt>
+               		</iterate>
+               		</and>
+               </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+</plugin>

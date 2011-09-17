@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG JDT Utils Plug-in
+Bundle-SymbolicName: org.org.eclipse.core.utils.jdt;singleton:=true
+Bundle-Version: 1.2.0.20090622183000-M1
+Bundle-Vendor: ORG
+Bundle-Activator: org.org.eclipse.core.utils.jdt.JDTUtilsPlugin
+Require-Bundle: org.eclipse.jdt.core;visibility:=reexport,
+ org.eclipse.jdt.launching;visibility:=reexport,
+ org.org.eclipse.core.utils.platform
+Export-Package: org.org.eclipse.core.utils.jdt.tools

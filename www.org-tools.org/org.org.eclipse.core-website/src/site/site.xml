@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="ORG">
+	<skin>
+		<groupId>org.org-libs</groupId>
+		<artifactId>org-maven2-skin</artifactId>
+		<version>1.0.0</version>
+	</skin>
+	<bannerLeft>
+		<name>ORG</name>
+		<src>./images/logo.png</src>
+	</bannerLeft>
+	<bannerRight>
+		<name>ORG Core</name>
+		<src>./images/Core.jpg</src>
+	</bannerRight>
+	<body>
+		<links>
+			<item name="ORG Tools" href="http://www.org-tools.org" />
+		</links>
+		<menu name="Documentation">
+			<item name="License" href="license.html"></item>
+		</menu>
+		<menu name="Download Latest">
+			<item name="Archived Update site"
+				href="https://sourceforge.net/project/showfiles.php?group_id=189404" />
+		</menu>
+		<menu name="Source repository">
+			<item name="SCM Changes Log" href="changelog.html" />
+			<item name="SCM access" href="source-repository.html" />
+		</menu>
+		<menu name="Feedback">
+			<item name="Assembla space"
+				href="http://www.assembla.com/spaces/org-tools" />
+			<item name="Issue Tracking" href="issue-tracking.html" />
+			<item name="Project team" href="team-list.html" />
+		</menu>
+	</body>
+	<poweredBy>
+		<logo name="Creative Commons"
+			href="http://creativecommons.org/licenses/by/3.0/"
+			img="http://i.creativecommons.org/l/by/3.0/88x31.png" />
+	</poweredBy>
+
+</project>

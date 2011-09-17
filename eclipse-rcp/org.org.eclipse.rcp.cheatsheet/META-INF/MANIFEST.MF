@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CheatSheet RCP
+Bundle-SymbolicName: org.org.eclipse.rcp.cheatsheet; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.org.eclipse.rcp.cheatsheet.Activator
+Bundle-Vendor: ORG
+Require-Bundle: org.eclipse.ui.cheatsheets,
+ org.org.eclipse.cheatsheet.commands,
+ org.org.eclipse.cheatsheet.catalog,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.help.ui
+Eclipse-LazyStart: true
+Export-Package: org.org.eclipse.rcp.cheatsheet;
+  uses:="org.eclipse.jface.action,
+   org.eclipse.jface.resource,
+   org.eclipse.ui.application,
+   org.eclipse.ui,
+   org.eclipse.equinox.app,
+   org.eclipse.ui.plugin,
+   org.osgi.framework"

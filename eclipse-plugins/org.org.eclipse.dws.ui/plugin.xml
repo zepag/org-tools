@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="ORG"
+            id="org.org.eclipse.ui.views">
+      </category>
+      <view
+            allowMultiple="false"
+            class="org.org.eclipse.dws.ui.internal.views.MavenRepositoriesView"
+            icon="icons/view.gif"
+            category="org.org.eclipse.ui.views"
+            name="%view.mavenRepositoriesView"
+            id="org.org.eclipse.dws.ui.internal.views.MavenRepositoriesView">
+      </view>
+      <view
+       		allowMultiple="false"
+            class="org.org.eclipse.dws.ui.internal.views.DetailsView"
+            icon="icons/artifact.gif"
+ 			category="org.org.eclipse.ui.views"
+            id="org.org.eclipse.dws.ui.internal.views.DetailsView"
+            name="%view.detailsView"/>
+      <view
+            allowMultiple="false"
+            category="org.org.eclipse.ui.views"
+            class="org.org.eclipse.dws.ui.internal.views.LibraryPacksView"
+            icon="icons/librarypack.gif"
+            id="org.org.eclipse.dws.ui.internal.views.LibraryPacksView"
+            name="%view.libraryPacksView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="org.org.eclipse.dws.ui.maven2.contribution1"
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               id="DWS.popupMenu"
+               label="%popupMenus.menu.label"
+               path="org.eclipse.jdt.ui.buildpath.menu"/>
+         <action
+               class="org.org.eclipse.dws.ui.internal.actions.LookupJavadocAndSourcesActionDelegate"
+               enablesFor="*"
+               icon="icons/jar_src_obj.gif"
+               id="org.org.eclipse.dws.ui.maven2.actions.LookupJavadocAndSourcesActionDelegate"
+               label="%popupMenus.menu.menuItems.maven2.lookup.javadocsources"
+               menubarPath="DWS.popupMenu/group1"/>
+         <action
+               class="org.org.eclipse.dws.ui.internal.actions.PomUpdateActionDelegate"
+               enablesFor="1"
+               icon="icons/refresh.gif"
+               id="org.org.eclipse.dws.ui.maven2.actions.PomUpdateActionDelegate"
+               label="%popupMenus.menu.menuItems.maven2.parsepom.update"
+               menubarPath="DWS.popupMenu/group1">
+               <enablement>
+               	 <and>
+               		<objectState
+                     name="name"
+                     value="pom.xml"/>
+               		<objectClass
+                      name="org.eclipse.core.resources.IFile"  />
+                 </and>
+               </enablement>
+         </action>
+         <action
+               class="org.org.eclipse.dws.ui.internal.actions.PomJavaSynchronizationActionDelegate"
+               enablesFor="1"
+               icon="icons/synchronize.gif"
+               id="org.org.eclipse.dws.ui.maven2.newAction"
+               label="%popupMenus.menu.menuItems.maven2.parsepom.synchronize"
+               menubarPath="DWS.popupMenu/group1">
+               <enablement>
+               	<and>
+               		<objectState
+                     name="name"
+                     value="pom.xml"/>
+               		<objectClass
+                      name="org.eclipse.core.resources.IFile"  />
+                 </and>
+               </enablement>
+         </action>
+         <action
+               class="org.org.eclipse.dws.ui.internal.actions.PomWebAppSynchronizationActionDelegate"
+               enablesFor="1"
+               icon="icons/synchronize.gif"
+               id="org.org.eclipse.dws.ui.maven2.newAction2"
+               label="%popupMenus.menu.menuItems.maven2.parsepom.webappSynchronize"
+               menubarPath="DWS.popupMenu/group1">
+               <enablement>
+               <and>
+               	<objectState
+                     name="name"
+                     value="pom.xml"/>
+               	<objectClass
+                      name="org.eclipse.core.resources.IFile"  />
+               </and>
+               </enablement>
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            id="org.org.eclipse.dws.ui.maven2.search.LibrarySearchPage"
+            class="org.org.eclipse.dws.ui.internal.search.LibrarySearchPage"
+            label="%searchPage.label"
+            icon="icons/view.gif"
+            extensions="*"
+            enabled="true"
+            canSearchEnclosingProjects="true"
+            showScopeSection="true"/>
+   </extension>
+   <extension
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            id="org.org.eclipse.dws.ui.maven2.search.LibrarySearchResultPage"
+            class="org.org.eclipse.dws.ui.internal.search.LibrarySearchResultPage"
+            searchResultClass="org.org.eclipse.dws.ui.internal.search.LibrarySearchResult"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.org.eclipse.dws.ui.maven2"
+            name="DWS wizards"/>
+      <wizard
+            category="org.org.eclipse.dws.ui.maven2"
+            class="org.org.eclipse.dws.ui.internal.wizards.NewPomFileWizard"
+            icon="icons/http_repository.gif"
+            id="org.org.eclipse.dws.ui.maven2.wizards.NewPomFileWizard"
+            name="%wizards.pom"/>
+      <primaryWizard id="org.org.eclipse.dws.ui.maven2.wizards.NewPomFileWizard"/>
+   </extension>
+   <extension
+          point="org.eclipse.ui.menus">
+       <menuContribution
+             locationURI="menu:org.org.eclipse.dws.menu">
+          <command
+                commandId="org.org.eclipse.dws.ui.maven2.openMavenRepositoryViewCommand"
+                icon="icons/view.gif"
+                label="Open Maven 2 Repositories View">
+          </command>
+          <command
+                commandId="org.org.eclipse.dws.ui.maven2.openDetailsViewCommand"
+                icon="icons/artifact.gif"
+                label="Opens the Details view">
+          </command>
+          <command
+                commandId="org.org.eclipse.dws.ui.maven2.findRepositoriesCommand"
+                icon="icons/http_repository.gif"
+                label="Find Repositories">
+          </command>
+          <command
+                commandId="org.org.eclipse.dws.ui.maven2.createClasspathVariableCommand"
+                icon="icons/synchronize.gif"
+                label="Create DWS Variables">
+          </command>
+          <command
+                commandId="org.org.eclipse.dws.ui.maven2.updateClasspathVariableCommand"
+                icon="icons/synchronize.gif"
+                label="Update DWS Variables">
+          </command>
+       </menuContribution>
+    </extension>
+    <extension
+          point="org.eclipse.ui.commands">
+       <category
+             id="org.org.eclipse.dws.ui.maven2.commands.category"
+             name="ORG DWS commands">
+       </category>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.AddRepositoryFromRemoteDefinitionHandler"
+             description="Allows to add a repository from a remote definition."
+             id=" org.org.eclipse.dws.ui.maven2.addRepositoryFromRemoteDefinitionCommand"
+             name="Import repository from remote definition">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addRepositoryFromRemoteDefinitionCommand.definitionURL"
+                   name="Repository definition URL"
+                   optional="false">
+             </commandParameter>
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.ImportRepositoryFromFileHandler"
+             description="Allows to import a repository from a previously exported xml file."
+             id=" org.org.eclipse.dws.ui.maven2.importRepositoryFromFileCommand"
+             name="Import repository from file export">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.importRepositoryFromFileCommand.file"
+                   name="File"
+                   optional="false">
+             </commandParameter>
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.ImportRepositoryFromUrlHandler"
+             description="Allows to import a repository from a previously exported xml file, accessed remotely through an URL."
+             id=" org.org.eclipse.dws.ui.maven2.importRepositoryFromUrlCommand"
+             name="Import repository from remote export">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.importRepositoryFromUrlCommand.url"
+                   name="URL"
+                   optional="false">
+             </commandParameter>
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.AddMavenLibraryToClasspathHandler"
+             description="Allows to add a library to the classpath by passing its maven description (groupId,artifactId,version and optionally classifier)."
+             id="org.org.eclipse.dws.ui.maven2.addMavenLibraryToClasspathCommand"
+             name="Add library to classpath">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibraryToClasspathCommand.group"
+                   name="Group Id"
+                   optional="false">
+             </commandParameter>
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibraryToClasspathCommand.artifact"
+                   name="Artifact Id"
+                   optional="false">
+             </commandParameter>
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibraryToClasspathCommand.version"
+                   name="Version"
+                   optional="false">
+             </commandParameter>
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibraryToClasspathCommand.classifier"
+                   name="Classifier"
+                   optional="true">
+             </commandParameter>
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.AddMavenLibrariesToClasspathHandler"
+             description="Allows to add libraries to the classpath by parsing a POM file and scanning its dependencies."
+             id="org.org.eclipse.dws.ui.maven2.addMavenLibrariesToClasspathCommand"
+             name="Add multiple libraries to classpath">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibrariesToClasspathCommand.pomUrl"
+                   name="Pom URL"
+                   optional="false">
+             </commandParameter>
+              <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.addMavenLibrariesToClasspathCommand.targetType"
+                   name="Target"
+                   optional="true"
+                   values="org.org.eclipse.dws.core.internal.handlers.TargetTypeValues">
+             </commandParameter>
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.ui.internal.handlers.OpenMavenRepositoryViewHandler"
+             description="Opens the Maven 2 repositories View in the workspace"
+             id="org.org.eclipse.dws.ui.maven2.openMavenRepositoryViewCommand"
+             name="Open Maven 2 Repositories View">
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.ui.internal.handlers.OpenDetailsViewHandler"
+             description="Opens the Details view in the workspace"
+             id="org.org.eclipse.dws.ui.maven2.openDetailsViewCommand"
+             name="Open Details View">
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.ui.internal.handlers.FindRepositoriesHandler"
+             description="Try to find repository definitions in pom files from the workspace"
+             id="org.org.eclipse.dws.ui.maven2.findRepositoriesCommand"
+             name="Find Repositories in Workspace">
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.CreateClasspathVariableHandler"
+             description="Creates the DWS variables defined in preferences and project properties."
+             id="org.org.eclipse.dws.ui.maven2.createClasspathVariableCommand"
+             name="Create DWS Variables">
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.UpdateDWSClasspathVariableHandler"
+             description="Update the DWS variables defined in preferences and project properties."
+             id="org.org.eclipse.dws.ui.maven2.updateClasspathVariableCommand"
+             name="Update DWS Variables">
+       </command>
+       <command
+             categoryId="org.org.eclipse.dws.ui.maven2.commands.category"
+             defaultHandler="org.org.eclipse.dws.core.internal.handlers.ChangeClasspathVariableHandler"
+             description="Replaces a variable used in the workspace with another variable (used for maintenance or migration of existing variables)."
+             id="org.org.eclipse.dws.ui.maven2.changeClasspathVariableCommand"
+             name="Modify Classpath Variable name">
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.changeClasspathVariableCommand.originalVariable"
+                   optional="false"
+                   name="Original variable">
+             </commandParameter>
+             <commandParameter
+                   id="org.org.eclipse.dws.ui.maven2.changeClasspathVariableCommand.targetVariable"
+                   optional="false"
+                   name="Target variable">
+             </commandParameter>
+       </command>
+
+    </extension>
+    <extension
+          point="org.eclipse.ui.perspectiveExtensions">
+       <perspectiveExtension
+             targetID="*">
+          <newWizardShortcut
+                id="org.org.eclipse.dws.ui.maven2.wizards.NewPomFileWizard">
+          </newWizardShortcut>
+          <viewShortcut
+                id="org.org.eclipse.dws.ui.maven2.views.MavenRepositoriesView">
+          </viewShortcut>
+          <viewShortcut
+                id="org.org.eclipse.dws.ui.maven2.views.DetailsView">
+          </viewShortcut>
+       </perspectiveExtension>
+    </extension>
+    <extension
+          point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+       <category
+             id="org.org.eclipse.dws.ui.maven2.cheatsheetscategory"
+             name="ORG DWS">
+       </category>
+       <cheatsheet
+             category="org.org.eclipse.dws.ui.maven2.cheatsheetscategory"
+             composite="false"
+             contentFile="cheatSheets/DEPENDENCIES_STORAGE.xml"
+             id="org.org.eclipse.dws.ui.maven2.wrongVariable"
+             name="Deal with former DEPENDENCIES_STORAGE variable">
+       </cheatsheet>
+    </extension>
+    <extension
+          point="org.org.eclipse.dws.core.DWSRepositoryModelListeners">
+       <model-update-listener
+             id="DWSUI"
+             implementation="org.org.eclipse.dws.ui.ModelUpdateListener">
+       </model-update-listener>
+    </extension>
+  	
+</plugin>

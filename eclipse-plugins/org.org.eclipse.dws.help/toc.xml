@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc link_to="/org.org.eclipse.help/toc.xml#postFeatures" label="DWS">
+	<topic label="DWS Feature" href="html/maintopic.html">
+		<topic label="Sub Topic" href="html/subtopic.html" />
+	</topic>
+</toc>

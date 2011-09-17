@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cheatsheet-catalog name="ORG Tests" provider="ORG">
+	<cheatsheet-reference id="cheatsheet" name="CheatSheet Commands"
+		description="CheatSheet Commands" type="PLATFORM"
+		url="platform:/org.org.eclipse.test.cheatsheet" category="Basic Tests"
+		tags="Test" />
+	<cheatsheet-reference id="dws" name="DWS Commands"
+		description="DWS Commands" type="PLATFORM"
+		url="platform:/org.org.eclipse.test.dws" category="Basic Tests"
+		tags="Test" />
+	<cheatsheet-reference id="helpers" name="Helpers Commands"
+		description="Helpers Commands" type="PLATFORM"
+		url="platform:/org.org.eclipse.test.helpers" category="Basic Tests"
+		tags="Test" />
+</cheatsheet-catalog>

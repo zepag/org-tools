@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cheat sheet Commands Plug-in
+Bundle-SymbolicName: org.org.eclipse.cheatsheet.commands;singleton:=true
+Bundle-Version: 1.2.0.20090622183000-M1
+Bundle-Vendor: ORG
+Require-Bundle: org.org.eclipse.core.utils.platform,
+ org.org.eclipse.core.ui
+Export-Package: org.org.eclipse.cheatsheet.commands;uses:="org.eclipse.ui.plugin,org.osgi.framework",
+ org.org.eclipse.cheatsheet.commands.handlers;uses:="org.org.eclipse.core.utils.platform.commands.handlers,org.eclipse.core.commands",
+ org.org.eclipse.cheatsheet.commands.internal.dialog;x-internal:=true,
+ org.org.eclipse.cheatsheet.commands.internal.jobs;x-internal:=true
+Bundle-Activator: org.org.eclipse.cheatsheet.commands.CheatSheetCommandsPlugin

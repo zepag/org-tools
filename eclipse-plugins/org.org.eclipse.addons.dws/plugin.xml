@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+  	    <extension
+          id="org.org.eclipse.dws.addons.additionalpatternsets"
+          name="Additional Pattern Sets"
+          point="org.org.eclipse.dws.core.DWSMaven2PluginPatternSet">
+       <pattern-set
+             label="S3 Browse parsing patterns">
+          <entry-pattern>
+            [^&gt;]*&lt;(p|td)&gt;&lt;a href=\&quot;[^#?]+\&quot;&gt;(.+)&lt;/a&gt;.*
+          </entry-pattern>
+          <parent-directory-pattern>
+             [^&gt;]*&lt;p&gt;&lt;a href=\&quot;[^#]+\&quot;&gt;ROOT&lt;/a&gt;.*
+          </parent-directory-pattern>
+          <file-entry-pattern>
+             [^&gt;]*&lt;td&gt;&lt;a href=\&quot;[^#]*\&quot;&gt;(.+)&lt;/a&gt;.*
+          </file-entry-pattern>
+          <directory-entry-pattern>
+             [^&gt;]*&lt;td&gt;&lt;a href=\&quot;[^#]*/\&quot;&gt;(.+)&lt;/a&gt;.*
+          </directory-entry-pattern>
+       </pattern-set>
+    </extension>
+    <extension
+          point="org.org.eclipse.dws.core.DWSMaven2RepositoryDefinition">
+       <http-crawled-repository
+             base-url="http://repo1.maven.org/maven2"
+             label="ORG LIBS@MAVEN2"
+             pattern-extensionpoint-label="Apache 2 parsing patterns">
+          <group-filters>
+             <group-filter
+                   pattern="org.org-libs">
+             </group-filter>
+          </group-filters>
+       </http-crawled-repository>
+    </extension>
+</plugin>

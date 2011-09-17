@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.org.eclipse.dws.core.internal.configuration.preferences.GeneralPreferencePage"
+            category="org.org.eclipse.dws.core.internal.configuration.preferences.DWSPreferencePage"
+            name="%preferences.pages.maven2.general.name"
+            id="org.org.eclipse.dws.core.internal.configuration.preferences.GeneralPreferencePage"/>
+      <page
+            class="org.org.eclipse.dws.core.internal.configuration.preferences.SyncPreferencePage"
+            category="org.org.eclipse.dws.core.internal.configuration.preferences.DWSPreferencePage"
+            name="%preferences.pages.maven2.advanced.name"
+            id="org.org.eclipse.dws.core.internal.configuration.preferences.SyncPreferencePage"/>
+      <page
+            category="ORGPreferencePage"
+            class="org.org.eclipse.dws.core.internal.configuration.preferences.DWSPreferencePage"
+            id="org.org.eclipse.dws.core.internal.configuration.preferences.DWSPreferencePage"
+            name="%preferences.pages.dws.name"/>
+      <page
+            category="org.org.eclipse.dws.core.internal.configuration.preferences.DWSPreferencePage"
+            class="org.org.eclipse.dws.core.internal.configuration.preferences.PomWizardPreferencePage"
+            id="org.org.eclipse.dws.core.internal.configuration.preferences.PomWizardPreferencePage"
+            name="%preferences.pages.maven2.wizard.name"/>
+   </extension>
+    <extension id="maven2TabItem" name="Maven 2 Properties Tab Item"
+         point="org.org.eclipse.core.utils.platform.PropertyPageTabItems">
+      <tabItem
+            class="org.org.eclipse.dws.core.internal.configuration.properties.Maven2TabItemDefinition"
+            name="DWS Maven 2"
+            id="org.org.eclipse.dws.ui.maven2.properties.Maven2TabItemDefinition"/>
+   </extension>
+    <extension-point id="DWSMaven2PluginAlternativeConfiguration" name="DWS Maven 2 Plugin Alternative Configuration" schema="schema/DWSMaven2PluginAlternativeConfiguration.exsd"/>
+    <extension-point id="DWSMaven2PluginPatternSet" name="DWSMaven2PluginPatternSet" schema="schema/DWSMaven2PluginPatternSet.exsd"/>
+    <extension-point id="DWSMaven2RepositoryDefinition" name="DWSMaven2RepositoryDefinition" schema="schema/DWSMaven2RepositoryDefinition.exsd"/>
+    <extension-point id="DWSRepositoryModelListeners" name="DWSRepositoryModelListeners" schema="schema/DWSRepositoryModelListeners.exsd"/>
+      	    <extension
+          id="org.org.eclipse.dws.core.basicpatternsets"
+          name="Basic Pattern Sets"
+          point="org.org.eclipse.dws.core.DWSMaven2PluginPatternSet">
+       <pattern-set
+             label="Tomcat 6 parsing patterns">
+          <entry-pattern>
+            .*&lt;a href=&quot;.+&quot;&gt;&lt;.*&gt;(.+)&lt;.*&gt;&lt;/a&gt;.*
+          </entry-pattern>
+          <parent-directory-pattern>
+             .*&lt;a href=&quot;.+&quot;&gt;Parent Directory&lt;/a&gt;.*
+          </parent-directory-pattern>
+          <file-entry-pattern>
+             .*&lt;a href=&quot;.*&quot;&gt;(.+)&lt;/a&gt;.*
+          </file-entry-pattern>
+          <directory-entry-pattern>
+             .*&lt;a href=&quot;.*&quot;&gt;(.+)/&lt;/a&gt;.*
+          </directory-entry-pattern>
+       </pattern-set>
+              <pattern-set
+             label="Apache 2 parsing patterns">
+          <entry-pattern>
+            .*&lt;a href=&quot;.+&quot;&gt;(.+)&lt;/a&gt;.*
+          </entry-pattern>
+          <parent-directory-pattern>
+             .*&lt;a href=&quot;.+&quot;&gt;Parent Directory&lt;/a&gt;.*
+          </parent-directory-pattern>
+          <file-entry-pattern>
+             .*&lt;a href=&quot;.*&quot;&gt;(.+)&lt;/a&gt;.*
+          </file-entry-pattern>
+          <directory-entry-pattern>
+             .*&lt;a href=&quot;.*&quot;&gt;(.+)/&lt;/a&gt;.*
+          </directory-entry-pattern>
+       </pattern-set>
+       </extension>
+
+</plugin>

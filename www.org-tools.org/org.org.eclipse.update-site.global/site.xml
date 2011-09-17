@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://www.org-tools.org/updatesites/stable/3.3">
+      This is the global update site for all ORG Eclipse features.
+   </description>
+   <feature url="features/org.org.eclipse.core_1.2.0.20090622183000-M1.jar" id="org.org.eclipse.core" version="1.2.0.20090622183000-M1">
+      <category name="ORG Core"/>
+   </feature>
+   <feature url="features/org.org.eclipse.cheatsheet_1.2.0.20090622183000-M1.jar" id="org.org.eclipse.cheatsheet" version="1.2.0.20090622183000-M1">
+      <category name="ORG User Features"/>
+   </feature>
+   <feature url="features/org.org.eclipse.dws_1.2.0.20090622183000-M1.jar" id="org.org.eclipse.dws" version="1.2.0.20090622183000-M1">
+      <category name="ORG User Features"/>
+   </feature>
+   <feature url="features/org.org.eclipse.addons_1.2.0.20090622183000-M1.jar" id="org.org.eclipse.addons" version="1.2.0.20090622183000-M1">
+      <category name="ORG Add-ons and samples"/>
+   </feature>
+   <feature url="features/org.org.eclipse.helpers_1.2.0.20090622183000-M1.jar" id="org.org.eclipse.helpers" version="1.2.0.20090622183000-M1">
+      <category name="ORG User Features"/>
+   </feature>
+   <category-def name="ORG Core" label="ORG Core">
+      <description>
+         Core feature used by other ORG features. This is of little interest to users on its own.
+      </description>
+   </category-def>
+   <category-def name="ORG User Features" label="ORG User Features">
+      <description>
+         These are the features containing functionalities of interest to users of the Eclipse platform.
+      </description>
+   </category-def>
+   <category-def name="ORG Add-ons and samples" label="ORG Add-ons and samples">
+      <description>
+         These are features adding customized extensions and samples to ORG features
+      </description>
+   </category-def>
+</site>

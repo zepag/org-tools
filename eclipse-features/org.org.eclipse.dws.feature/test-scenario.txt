@@ -1,0 +1,35 @@
+﻿maven2 :
+
+- Ouvrir la vue Maven 2 repositories
+- Ajouter le repository IBIBLIO en utilisant l'auto-complétion.
+- Essayer de l'éditer (changer l'URL, ce qui crée un nouveau repository)
+- Essayer l'export
+- Essayer de le supprimer
+- Essayer l'import
+- Créer un projet simple
+- faire "add to folder" à partir de la view
+- Ajouter un fichier pom.xml au projet en utilisant le wizard (vérifier l'autocomplétion au passage)
+- Drag'n'dropper une librairie.
+- créer une dependency fausse.
+- synchronizer pour ajouter dans un répertoire (modifier le répertoire par défaut pour le test.
+
+- Créer un projet java
+- faire "add to folder" à partir de la view
+- faire "add to classpath" à partir de la view
+- faire "add to web app" à partir de la view
+- Copier le fichier pom.xml du précédent projet
+- Ajouter des librairies avec des scopes différents (test, provided) et une librairie optionelle.
+- synchronizer pour ajouter dans un répertoire (modifier le répertoire par défaut pour le test).
+- synchronizer pour ajouter dans le classpath (modifier le répertoire par défaut pour le test).
+- synchronizer pour ajouter dans un projet Web (modifier le répertoire par défaut pour le test).
+- Aller dans les propriétés du projet et décocher "Use workspace preferences", cocher "Consider optional dependencies"
+- tenter toutes les synchronisations pour vérifier que la dépendance optionelle est prise en compte.
+- Ajouter une dépendance à zapper dans les propriétés du projet (par exemple celle qui plante)
+- tenter toutes les synchronisations pour vérifier que la dépendance qui plantait n'est plus là ;)
+- Tester le browsing d'IBIBLIO avec org.hibernate comme groupe spécifique
+^<img src=".+" alt=".+" /> <a href="(.+)".+
+.+<a href=".+">Parent Directory</a>.+
+- Tester "Show dependency info" et "Show transitive dependencies" dans la view
+
+webservices :
+

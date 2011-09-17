@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG Core UI Plug-in
+Bundle-SymbolicName: org.org.eclipse.core.ui;singleton:=true
+Bundle-Version: 1.2.0.20090622183000-M1
+Bundle-Vendor: ORG
+Eclipse-LazyStart: true
+Bundle-Activator: org.org.eclipse.core.ui.BasePlugin
+Require-Bundle: org.eclipse.ui;visibility:=private,
+ org.eclipse.core.runtime;visibility:=reexport,
+ org.eclipse.jdt.core;visibility:=private,
+ org.org.eclipse.core.utils.platform;visibility:=private
+Export-Package: org.org.eclipse.core.ui,
+ org.org.eclipse.core.ui.dialogs,
+ org.org.eclipse.core.ui.images,
+ org.org.eclipse.core.ui.jobs.completion,
+ org.org.eclipse.core.ui.preferences,
+ org.org.eclipse.core.ui.properties

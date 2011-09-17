@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="org.org.eclipse.cheatshee.samples.catalogsContribution"
+         name="Samples Catalogs"
+         point="org.org.eclipse.cheatsheet.catalog.CheatSheetCatalogContribution">
+      <catalog-url
+            id="org.org.eclipse.cheatsheet.samples.catalog-url1"
+            name="ORG Samples Catalog"
+            url="http://www.org-tools.org/cheatsheets/samples-catalog.xml">
+      </catalog-url>
+   </extension>
+
+</plugin>

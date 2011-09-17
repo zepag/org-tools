@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="ORG CheatSheet IDE Helpers"
+            id="org.org.eclipse.cheatsheet.commands.ide.category">
+      </category>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.ide.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.CreateFileFromUrlHandler"
+            description="Allows to create a file in a project from a given URL. User will be prompted for the target project."
+            id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand"
+            name="Download file in Workspace">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl"
+               name="Remote file URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFolder"
+               name="Target folder in project"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFileName"
+               name="Target file name"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.mode"
+               name="File write mode"
+               optional="true"
+               values="org.org.eclipse.cheatsheet.commands.handlers.ModeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.customSuffix"
+               name="Custom suffix"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.ide.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.OpenInEditorHandler"
+            description="Allows to open a file in an editor."
+            id="org.org.eclipse.cheatsheet.commands.openInEditorCommand"
+            name="Open in Editor">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.openInEditorCommand.filePath"
+               name="File path"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.openInEditorCommand.lineNumber"
+               name="Line Number"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.ide.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.CreateFileFromUrlAndOpenInEditorHandler"
+            description="Allows to create a file in a project from a given URL. User will be prompted for the target project. The file is finally opened in an editor."
+            id="org.org.eclipse.cheatsheet.commands.createFileFromUrlAndOpenInEditorCommand"
+            name="Download file in Workspace and Open in Editor">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl"
+               name="Remote file URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.lineNumber"
+               name="Line Number"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFolder"
+               name="Target folder in project"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFileName"
+               name="Target file name"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.mode"
+               name="File write mode"
+               optional="true"
+               values="org.org.eclipse.cheatsheet.commands.handlers.ModeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.customSuffix"
+               name="Custom suffix"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.ide.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.CreateProjectFromRemoteArchiveHandler"
+            description="Allows to create a project from a Remote Archive."
+            id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand"
+            name="Download Archived project and install in workspace">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.fileUrl"
+               name="Remote archive URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.pathInArchive"
+               name="Path in archive"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.targetProjectName"
+               name="Target project name"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.mode"
+               name="Project write mode"
+               optional="true"
+               values="org.org.eclipse.cheatsheet.commands.handlers.ModeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.customSuffix"
+               name="Custom suffix"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.ide.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.ExtractFromRemoteArchiveHandler"
+            description="Allows to extract contents from a Remote Archive in a project."
+            id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand"
+            name="Download Archive and extract in Workspace">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.fileUrl"
+               name="Remote archive URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.pathInArchive"
+               name="Path in archive"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.pathInProject"
+               name="Path in target project"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.mode"
+               name="Files write mode"
+               optional="true"
+               values="org.org.eclipse.cheatsheet.commands.handlers.ModeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.customSuffix"
+               name="Custom suffix"
+               optional="true">
+         </commandParameter>
+      </command>
+   </extension>
+</plugin>

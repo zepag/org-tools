@@ -1,0 +1,17 @@
+Welcome to the update sites of the ORG Eclipse tools.
+
+	Two update sites are available for the moment:
+
+-----------------------------------------
+http://www.org-tools.org/updatesites/stable/3.3
+-----------------------------------------
+
+	Obviously for stable releases ;).
+
+-----------------------------------------
+http://www.org-tools.org/updatesites/test/3.3
+-----------------------------------------
+
+	Obviously for staging/test snapshots ;).
+
+	Use them in the Eclipse updates system.

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG Feature Branding Plug-in
+Bundle-SymbolicName: org.org.eclipse.core;singleton:=true
+Bundle-Version: 1.2.0.20090622183000-M1
+Bundle-Vendor: ORG
+Require-Bundle: org.eclipse.ui.intro,
+ org.eclipse.ui.intro.universal,
+ org.eclipse.ui

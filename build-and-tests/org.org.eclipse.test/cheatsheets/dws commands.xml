@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="DWS Commands tests">
+   <intro>
+      <description>
+      </description>
+   </intro>
+   <item title="Open Maven 2 repositories view" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.dws.core.openMavenRepositoryViewCommand" confirm="false">
+      </command>
+   </item>
+   <item title="Import repository from remote export" dialog="true" skip="false">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.dws.core.importRepositoryFromUrlCommand(org.org.eclipse.dws.core.importRepositoryFromUrlCommand.url=http://www.org-tools.org/eclipse-cheatsheethelpers/eclipsedemocamp/maven-repo-export.xml)" confirm="false">
+      </command>
+   </item>
+   <item title="Open Details view" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.dws.core.openDetailsViewCommand" confirm="false">
+      </command>
+   </item>
+   <item title="Create a java project" dialog="true" skip="false">
+      <description>
+      </description>
+      <command serialization="org.eclipse.ui.newWizard(newWizardId=org.eclipse.jdt.ui.wizards.JavaProjectWizard)" confirm="false">
+      </command>
+   </item>
+   <item title="Add a library from remote repository" dialog="true" skip="false">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.dws.core.addMavenLibraryToClasspathCommand(org.org.eclipse.dws.core.addMavenLibraryToClasspathCommand.version=2.5.6,org.org.eclipse.dws.core.addMavenLibraryToClasspathCommand.artifact=spring,org.org.eclipse.dws.core.addMavenLibraryToClasspathCommand.group=org.springframework)" confirm="false">
+      </command>
+   </item>
+   <item dialog="true" skip="true">
+      <description>
+      </description>
+   </item>
+</cheatsheet>

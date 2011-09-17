@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org_lib_maven2_crawler
+Bundle-SymbolicName: org.org.lib.repository.crawler
+Bundle-Version: 1.2.0.20090622183000-M1
+Export-Package: org.org.repository.crawler,
+ org.org.repository.crawler.items,
+ org.org.repository.crawler.items.immutable,
+ org.org.repository.crawler.items.mutable,
+ org.org.repository.crawler.mapping,
+ org.org.repository.crawler.maven2,
+ org.org.repository.crawler.maven2.model,
+ org.org.repository.crawler.maven2.model.protocolplugins,
+ org.org.repository.crawler.services
+Require-Bundle: org.org.lib.model;visibility:=reexport
+

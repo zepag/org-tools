@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="ORG Helpers"
+            id="org.org.eclipse.helpers.core.category">
+      </category>
+      <command
+      		categoryId="org.org.eclipse.helpers.core.category"
+            defaultHandler="org.org.eclipse.helpers.core.internal.handlers.ConvertToWSTFacetedProjectHandler"
+            description="This converts projects to WST Faceted Projects"
+            id="org.org.eclipse.helpers.core.ConvertToWSTFacetedProjectCommand"
+            name="Convert to WST Faceted Projects">
+            <commandParameter
+                  id="org.org.eclipse.helpers.core.ConvertToWSTFacetedProjectCommand.projectsToConvert"
+                  name="Comma separated project names">
+            </commandParameter>
+      </command>
+      <command
+      		categoryId="org.org.eclipse.helpers.core.category"
+            defaultHandler="org.org.eclipse.helpers.core.internal.handlers.OpenWSTFacetsWizardHandler"
+            description="This opens the WST Facets wizard on Projects"
+            id="org.org.eclipse.helpers.core.OpenWSTFacetsWizardCommand"
+            name="Open WST Facets wizard">
+            <commandParameter
+                  id="org.org.eclipse.helpers.core.OpenWSTFacetsWizardCommand.targetProjects"
+                  name="Comma separated project names">
+            </commandParameter>
+      </command>
+   </extension>
+</plugin>

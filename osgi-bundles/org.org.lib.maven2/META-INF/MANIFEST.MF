@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org_lib_maven2
+Bundle-SymbolicName: org.org.lib.maven2
+Bundle-Version: 1.2.0.20090622183000-M1
+Export-Package: org.org.maven2
+Require-Bundle: org.org.lib.repository.crawler

@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.org.eclipse.dws.core">
+<annotation>
+      <appInfo>
+         <meta.schema plugin="org.org.eclipse.dws.core" id="DWSMaven2PluginPatternSet" name="DWSMaven2PluginPatternSet"/>
+      </appInfo>
+      <documentation>
+         This extension point allows other Plugins to contribute parsing pattern sets.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="pattern-set"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  The extension-point of this extension.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Extension identifier.
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  Name of this extension.
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="pattern-set">
+      <complexType>
+         <sequence>
+            <element ref="entry-pattern"/>
+            <element ref="parent-directory-pattern"/>
+            <element ref="file-entry-pattern"/>
+            <element ref="directory-entry-pattern"/>
+         </sequence>
+         <attribute name="label" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appInfo>
+                  <meta.attribute translatable="true"/>
+               </appInfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="entry-pattern" type="string">
+   </element>
+
+   <element name="parent-directory-pattern" type="string">
+   </element>
+
+   <element name="file-entry-pattern" type="string">
+   </element>
+
+   <element name="directory-entry-pattern" type="string">
+   </element>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="since"/>
+      </appInfo>
+      <documentation>
+         This extension point appears in release 1.1.0
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="examples"/>
+      </appInfo>
+      <documentation>
+         The following is an example of the extension point usage, which defines an alternative configuration without setting a priority:
+
+   &lt;p&gt;
+   &lt;pre&gt;
+      &lt;extension point=&quot;org.org.eclipse.dws.core.DWSMaven2PluginPatternSet&quot;
+     id=&quot;id1&quot;
+     name=&quot;name&quot;&gt;
+         &lt;pattern-set label=&quot;Apache 2 parsing patterns&quot;&gt;
+         	&lt;entry-pattern&gt;.*&amp;lt;a href=\&amp;quot;.+\&amp;quot;&amp;gt;&amp;lt;.*&amp;gt;(.+)&amp;lt;.*&amp;gt;&amp;lt;/a&amp;gt;.*&lt;/entry-pattern&gt;
+         	&lt;parent-directory-pattern&gt;.*&amp;lt;a href=\&amp;quot;.+\&amp;quot;&amp;gt;Parent Directory&amp;lt;/a&amp;gt;.*&lt;/parent-directory-pattern&gt;
+         	&lt;file-entry-pattern&gt;.*&amp;lt;a href=\&amp;quot;.*\&amp;quot;&amp;gt;(.+)&amp;lt;/a&amp;gt;.*&lt;/file-entry-pattern&gt;
+         	&lt;directory-entry-pattern&gt;.*&amp;lt;a href=\&amp;quot;.*\&amp;quot;&amp;gt;(.+)/&amp;lt;/a&amp;gt;.*&lt;/directory-entry-pattern&gt;
+         &lt;/pattern-set&gt;
+      &lt;/extension&gt;
+   &lt;/pre&gt;
+   &lt;/p&gt;
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="apiInfo"/>
+      </appInfo>
+      <documentation>
+         No specific API to implement. The endpoint declaration is sufficient
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="implementation"/>
+      </appInfo>
+      <documentation>
+         No supplied implementation.
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appInfo>
+         <meta.section type="copyright"/>
+      </appInfo>
+      <documentation>
+         
+      </documentation>
+   </annotation>
+
+</schema>

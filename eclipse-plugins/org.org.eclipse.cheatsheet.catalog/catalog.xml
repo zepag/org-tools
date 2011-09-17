@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet-catalog name="ORG catalog" provider="ORG"
+	icon="http://www.org-tools.org/eclipse-dws/">
+	<cheatsheet-reference id="mycheatsheet" name="My Cheat Sheets"
+		url="http://www.org-tools.org/eclipse-dws/cheatsheet.xml"
+		category="Dev" tags="blabla,bloblo" />
+	<cheatsheet-reference id="mycheatsheet2" name="My Cheat Sheets 2"
+		url="http://www.org-tools.org/eclipse-dws/cheatsheet2.xml"
+		category="Dev" tags="blabla,bloblo" />
+	<cheatsheet-reference id="mycheatsheet3" name="My Cheat Sheets 3"
+		url="http://www.org-tools.org/eclipse-dws/cheatsheet3.xml"
+		category="Whatever" tags="blabla,blibli" />
+</cheatsheet-catalog>

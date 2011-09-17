@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="org.org.eclipse.core.ui.properties.GlobalProjectPropertyPage"
+            id="org.org.eclipse.core.ui.globalPropertyPage"
+            name="ORG Tools">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+            </adapt>
+         </enabledWhen>
+      </page>
+   </extension>
+</plugin>

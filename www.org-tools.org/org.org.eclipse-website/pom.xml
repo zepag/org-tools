@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.org</groupId>
+	<artifactId>org-tools-site</artifactId>
+	<name>ORG Tools</name>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<url>http://www.org-tools.org/</url>
+	<description>Simple tools for java development.</description>
+	<!-- 
+		Before calling site:deploy, first create a shell on shell.sourceforge.net (lasts 240 minutes at this moment)
+		ssh -t zepag,eclipse-dws@shell.sourceforge.net create
+	-->
+	<distributionManagement>
+		<site>
+			<id>sourceforge.net</id>
+			<url>
+				scp://zepag,eclipse-dws@shell.sourceforge.net/home/groups/e/ec/eclipse-dws/htdocs
+			</url>
+		</site>
+	</distributionManagement>
+	<pluginRepositories>
+		<pluginRepository>
+			<url>http://snapshots.repository.codehaus.org/</url>
+			<id>codehaus-snapshots</id>
+			<name>Codehaus snapshot plugin repository</name>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<build>
+		<defaultGoal>site</defaultGoal>
+		<plugins>
+
+		</plugins>
+	</build>
+	<dependencies>
+
+	</dependencies>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

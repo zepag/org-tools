@@ -1,0 +1,9 @@
+Welcome to the release site of the ORG Eclipse CheatSheets Samples.
+	
+	This site hosts CheatSheet Catalogs and CheatSheets accessible from Eclipse through ORG CheatSheet Helpers.
+	
+	There are 2 ways to use these catalogs, whether by installing the optional ORG CheatSheet Samples features while installing ORG CheatSheet Helpers, or by directly referencing the catalog through its URL:
+	
+-----------------------
+http://www.org-tools.org/cheatsheets/samples-catalog.xml
+-----------------------

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org_lib_model
+Bundle-SymbolicName: org.org.lib.model
+Bundle-Version: 1.2.0.20090622183000-M1
+Export-Package: org.org.model

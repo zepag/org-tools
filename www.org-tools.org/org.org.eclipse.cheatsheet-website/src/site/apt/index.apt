@@ -1,0 +1,19 @@
+Welcome to the release site of the ORG Eclipse CheatSheet Helpers features.
+	
+	This feature provides a CheatSheet Catalog and many useful commands for better CheatSheets.
+		
+* How do I get it?
+
+	The final updated version <<1.1.0>> is now available.
+	Prerequisites are Eclipse 3.3 (Europa) or 3.4 (Ganymede) and JDK > 5.0 to run it. 
+	You will be able to easily install it by pointing your Update Manager to the {{{http://www.org-tools.org/updatesite/stable/3.3}Releases update site}}.
+	Copy the following URL:
+
+-----------------------------------------------------------------
+http://www.org-tools.org/updatesites/stable/3.3
+-----------------------------------------------------------------	
+	
+	If you are behind a firewall or enduring an over-secure proxy configuration, you will also be able to download the <<archived-updatesite>> (see Download link in the side menu) and install it locally.
+	
+	Test versions are available for anybody who wants to give them a try.
+	You can easily install them by pointing your Update Manager to the {{{http://eclipse-dws.org-tools.org/updatesites/test/}Test update site}} (just choose the latest...).

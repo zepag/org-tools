@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Cheatsheet commands">
+   <intro>
+      <description>
+         <b>Body</b>
+      </description>
+   </intro>
+   <item title="create file" dialog="true" skip="true">
+      <description>
+         <b>Body</b>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand(org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl=http://fr.yahoo.com/index.html)" confirm="false">
+      </command>
+   </item>
+   <item title="create file and open" dialog="true" skip="true">
+      <description>
+         <b>Body</b>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createFileFromUrlAndOpenInEditorCommand(org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl=http://fr.yahoo.com/index.html)" confirm="false">
+      </command>
+   </item>
+   <item title="create project from archive" dialog="true" skip="true">
+      <description>
+         <b>Body</b>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand(org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.fileUrl=http://archive.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/ecjsrc.zip )" confirm="false">
+      </command>
+   </item>
+   <item title="Extract in project" dialog="true" skip="true">
+      <description>
+         <b>Body</b>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand(org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.pathInProject=extract,org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.fileUrl=http://archive.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/ecjsrc.zip )" confirm="false">
+      </command>
+   </item>
+</cheatsheet>

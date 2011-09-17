@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="Cheatsheet commands">
+   <intro>
+      <description>
+      </description>
+   </intro>
+   <item title="Add text to clipboard" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.addTextToClipboardFromUrlCommand(org.org.eclipse.cheatsheet.commands.addTextToClipboardFromUrlCommand.text=Essai de copie de texte)" confirm="false">
+      </command>
+   </item>
+   <item title="Download content to clipboard" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.addFileContentToClipboardFromUrlCommand(org.org.eclipse.cheatsheet.commands.addFileContentToClipboardFromUrlCommand.fileUrl=http://www.yahoo.fr)" confirm="false">
+      </command>
+   </item>
+   <item title="Download file in filesystem" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand(org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.targetPath=/,org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.fileUrl=http://www.yahoo.fr)" confirm="false">
+      </command>
+   </item>
+   <item title="Download Archive and extract in workspace" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand(org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.pathInProject=/essai,org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.pathInArchive=/,org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.mode=REPLACE,org.org.eclipse.cheatsheet.commands.extractFromRemoteArchiveCommand.fileUrl=http://archive.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/ecjsrc.zip)" confirm="false">
+      </command>
+   </item>
+   <item title="Download Project Archive and install in workspace" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand(org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.fileUrl=http://archive.eclipse.org/eclipse/downloads/drops/R-3.3-200706251500/ecjsrc.zip,org.org.eclipse.cheatsheet.commands.createProjectFromRemoteArchiveCommand.targetProjectName=ecjsrc-extracted)" confirm="false">
+      </command>
+   </item>
+   <item title="Download remote file in workspace" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand(org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFileName=myYahoo.html,org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl=http://www.yahoo.fr)" confirm="false">
+      </command>
+   </item>
+   <item title="Download remote file in workspace and open in editor" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.createFileFromUrlAndOpenInEditorCommand(org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.targetFileName=myYahoo2.html,org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.fileUrl=http://www.yahoo.fr,org.org.eclipse.cheatsheet.commands.createFileFromUrlCommand.lineNumber=5)" confirm="false">
+      </command>
+   </item>
+   <item title="Open in editor" dialog="true" skip="true">
+      <description>
+      </description>
+      <command serialization="org.org.eclipse.cheatsheet.commands.openInEditorCommand(org.org.eclipse.cheatsheet.commands.openInEditorCommand.filePath=ecjsrc/build.xml,org.org.eclipse.cheatsheet.commands.openInEditorCommand.lineNumber=6)" confirm="false">
+      </command>
+   </item>
+</cheatsheet>

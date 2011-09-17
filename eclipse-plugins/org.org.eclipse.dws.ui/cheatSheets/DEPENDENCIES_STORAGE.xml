@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cheatsheet title="DEPENDENCIES_STORAGE variable issue">
+   <intro>
+      <description>
+         If you import projects using former versions of DWS, you may have issues related to the DEPENDENCIES_STORAGE variable not being found anymore.<br/><br/>
+In fact the DEPENDENCIES_STORAGE has been renamed <b>M2_REPO</b> as a default as DWS only supports Maven for now (this allows to keep a coherence between this and maven generated classpath entries).<br/>
+The few following steps will create the new variable and update the declaration of the former DEPENDENCIES_STORAGE with this new variable.<br/>
+You may also go into the preferences and change the variable back to DEPENDENCIES_STORAGE.
+      </description>
+   </intro>
+   <item title="Create the new M2_REPO variable" dialog="true" skip="false">
+      <description>
+         This step can also be done through the ORG &gt; DWS menu.
+      </description>
+      <command serialization="org.org.eclipse.dws.core.createClasspathVariableCommand()" confirm="false">
+      </command>
+   </item>
+   <item title="Replace former DEPENDENCIES_STORAGE variables" dialog="true" skip="false">
+      <description>
+         This step replaces the DEPENDENCIES_STORAGE variable with a M2_REPO variable in your projects.
+      </description>
+      <command serialization="org.org.eclipse.dws.core.changeClasspathVariableCommand(org.org.eclipse.dws.core.changeClasspathVariableCommand.originalVariable=DEPENDENCIES_STORAGE,org.org.eclipse.dws.core.changeClasspathVariableCommand.targetVariable=M2_REPO)" confirm="false">
+      </command>
+   </item>
+</cheatsheet>

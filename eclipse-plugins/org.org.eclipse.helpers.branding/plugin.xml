@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.org.eclipse.menu">
+         <menu
+               id="org.org.eclipse.helpers.menu"
+               label="Helpers">
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>

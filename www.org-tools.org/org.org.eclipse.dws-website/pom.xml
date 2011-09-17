@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.org</groupId>
+	<artifactId>org-dws-site</artifactId>
+	<name>ORG Eclipse DWS</name>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<url>http://www.org-tools.org/eclipse-dws</url>
+	<licenses>
+		<license>
+			<name>the Eclipse Public License version 1.0</name>
+			<url>http://www.eclipse.org/org/documents/epl-v10.html</url>
+			<distribution>manual</distribution>
+		</license>
+	</licenses>
+	<description>
+		A Dependency Weaving System for Eclipse projects
+	</description>
+	<issueManagement>
+		<system>Assembla Trac</system>
+		<url>http://trac.assembla.com/org-tools</url>
+	</issueManagement>
+	<!-- 
+		Before calling site:deploy, first create a shell on shell.sourceforge.net (lasts 240 minutes at this moment)
+		ssh -t zepag,eclipse-dws@shell.sourceforge.net create
+	-->
+	<distributionManagement>
+		<site>
+			<id>sourceforge.net</id>
+			<url>
+				scp://zepag,eclipse-dws@shell.sourceforge.net/home/groups/e/ec/eclipse-dws/htdocs/eclipse-dws
+			</url>
+		</site>
+	</distributionManagement>
+	<scm>
+		<connection>
+			scm:svn:https://svn.assembla.com/svn/org-tools
+		</connection>
+		<developerConnection>
+			scm:svn:https://svn.assembla.com/svn/org-tools
+		</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://svn.assembla.com/svn/org-tools</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>zepag</id>
+			<name>Pierre-Antoine Gregoire</name>
+			<roles>
+				<role>Project Administrator</role>
+				<role>Main Contributor</role>
+			</roles>
+			<url>http://zepag.blogspot.com</url>
+			<email>pierre.antoine.gregoire@gmail.com</email>
+		</developer>
+	</developers>
+	<pluginRepositories>
+		<pluginRepository>
+			<url>http://snapshots.repository.codehaus.org/</url>
+			<id>codehaus-snapshots</id>
+			<name>Codehaus snapshot plugin repository</name>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<build>
+		<defaultGoal>site</defaultGoal>
+		<plugins>
+
+		</plugins>
+	</build>
+	<dependencies>
+
+	</dependencies>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>
+					maven-project-info-reports-plugin
+				</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>license</report>
+							<report>project-team</report>
+							<report>scm</report>
+							<report>issue-tracking</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-changelog-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

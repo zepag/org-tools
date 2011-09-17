@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="ORG CheatSheet Helpers"
+            id="org.org.eclipse.cheatsheet.commands.category">
+      </category>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.AddFileContentToClipboardFromUrlHandler"
+            description="Allows to add the contents of a file to the clipboard from a given URL."
+            id="org.org.eclipse.cheatsheet.commands.addFileContentToClipboardFromUrlCommand"
+            name="Download content to Clipboard">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.addFileContentToClipboardFromUrlCommand.fileUrl"
+               name="Remote file URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.addFileContentToClipboardFromUrlCommand.encoding"
+               name="Remote file encoding"
+               optional="true">
+         </commandParameter>
+      </command>
+       <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.AddTextToClipboardFromUrlHandler"
+            description="Allows to add some text to the clipboard."
+            id="org.org.eclipse.cheatsheet.commands.addTextToClipboardFromUrlCommand"
+            name="Add text to Clipboard">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.addTextToClipboardFromUrlCommand.text"
+               name="Text"
+               optional="false">
+         </commandParameter>
+      </command>
+       <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.CreateFileInFileSystemFromUrlHandler"
+            description="Allows to create a file from a given URL. User will be prompted for the target path."
+            id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand"
+            name="Download file in File System">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.fileUrl"
+               name="Remote file URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.targetPath"
+               name="Target path in filesystem"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.targetFileName"
+               name="Target file name"
+               optional="true">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.mode"
+               name="File write mode"
+               optional="true"
+               values="org.org.eclipse.cheatsheet.commands.handlers.ModeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.createFileInFileSystemFromUrlCommand.customSuffix"
+               name="Custom suffix"
+               optional="true">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.GenerateFileInFileSystemHandler"
+            description="Allows to generate a file from a template found at a given URL and from a remote parameters file."
+            id="org.org.eclipse.cheatsheet.commands.generateFileInFileSystemCommand"
+            name="Generate file in File System from template">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.generateFileInFileSystemCommand.templateEngine"
+               name="Template engine"
+               optional="false"
+               values="org.org.eclipse.cheatsheet.commands.handlers.FileGeneratorTypeParameterValues">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.generateFileInFileSystemCommand.templateUrl"
+               name="Template URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.generateFileInFileSystemCommand.templateParametersUrl"
+               name="Template Parameters"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.InsertNodeInXmlFileFromFileSystemHandler"
+            description="Allows to insert an xml node (defined in a remote file) into a file in the local file system."
+            id="org.org.eclipse.cheatsheet.commands.insertNodeInXmlFileFromFileSystemCommand"
+            name="Insert Node in Xml file in File System">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.insertNodeInXmlFileFromFileSystemCommand.targetXPath"
+               name="Target XPath"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.insertNodeInXmlFileFromFileSystemCommand.nodeDefinitionUrl"
+               name="Remote node definition URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.insertNodeInXmlFileFromFileSystemCommand.targetFile"
+               name="Local file to update"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.RemoveNodeFromXmlFileFromFileSystemHandler"
+            description="Allows to remove an xml node from a file in the local file system."
+            id="org.org.eclipse.cheatsheet.commands.removeNodeFromXmlFileFromFileSystemCommand"
+            name="Remove Node from Xml file in File System">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.removeNodeFromXmlFileFromFileSystemCommand.targetXPath"
+               name="Target XPath"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.removeNodeFromXmlFileFromFileSystemCommand.targetFile"
+               name="Local file to update"
+               optional="false">
+         </commandParameter>
+      </command>
+      <command
+            categoryId="org.org.eclipse.cheatsheet.commands.category"
+            defaultHandler="org.org.eclipse.cheatsheet.commands.handlers.ReplaceNodeInXmlFileFromFileSystemHandler"
+            description="Allows to substitute an xml node with another xml node (defined in a remote file) into a file in the local file system."
+            id="org.org.eclipse.cheatsheet.commands.replaceNodeInXmlFileFromFileSystemCommand"
+            name="Replace Node in Xml file in File System">
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.replaceNodeInXmlFileFromFileSystemCommand.targetXPath"
+               name="Target XPath"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.replaceNodeInXmlFileFromFileSystemCommand.nodeDefinitionUrl"
+               name="Remote node definition URL"
+               optional="false">
+         </commandParameter>
+         <commandParameter
+               id="org.org.eclipse.cheatsheet.commands.replaceNodeInXmlFileFromFileSystemCommand.targetFile"
+               name="Local file to update"
+               optional="false">
+         </commandParameter>
+      </command>
+   </extension>
+</plugin>

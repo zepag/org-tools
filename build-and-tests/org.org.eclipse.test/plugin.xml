@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.cheatsheets.cheatSheetContent">
+      <cheatsheet
+            category="org.org.eclipse.test.category"
+            composite="false"
+            contentFile="cheatsheets/cheatsheet commands.xml"
+            id="org.org.eclipse.test.cheatsheet"
+            name="org.org.eclipse.test.cheatsheet">
+      </cheatsheet>
+      <cheatsheet
+            category="org.org.eclipse.test.category"
+            composite="false"
+            contentFile="cheatsheets/dws commands.xml"
+            id="org.org.eclipse.test.dws"
+            name="org.org.eclipse.test.dws">
+      </cheatsheet>
+      <cheatsheet
+            category="org.org.eclipse.test.category"
+            composite="false"
+            contentFile="cheatsheets/helpers commands.xml"
+            id="org.org.eclipse.test.helpers"
+            name="org.org.eclipse.test.helpers">
+      </cheatsheet>
+      <category
+            id="org.org.eclipse.test.category"
+            name="ORG Tests">
+      </category>
+   </extension>
+   <extension
+         id="testCatalog"
+         name="Test Catalog"
+         point="org.org.eclipse.cheatsheet.catalog.CheatSheetCatalogContribution">
+      <catalog-file
+            id="org.org.eclipse.test.catalog"
+            name="Test Catalog"
+            xml-file="cheatsheets/cheatsheet-catalog.xml">
+      </catalog-file>
+   </extension>
+
+</plugin>
