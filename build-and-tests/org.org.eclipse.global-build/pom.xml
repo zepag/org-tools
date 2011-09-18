@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.org.eclipse</groupId>
+		<artifactId>org.org.eclipse.parent.pom</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../org.org.eclipse.parent.pom</relativePath>
+	</parent>
+	<artifactId>org.org.eclipse.global-build</artifactId>
+	<version>1.3.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>ORG Eclipse Global Build</name>
+	<modules>
+		<module>../org.org.eclipse.parent.pom/</module>
+		<module>../../org.org.bundles/org.org.bundles.build/</module>
+		<module>../../org.org.eclipse.core/org.org.eclipse.core.build/</module>
+		<module>../../org.org.eclipse.cheatsheet/org.org.eclipse.cheatsheet.build/</module>
+		<module>../../org.org.eclipse.dws/org.org.eclipse.dws.build/</module>
+		<module>../../org.org.eclipse.addons/org.org.eclipse.addons.build/</module>
+	</modules>
+</project>

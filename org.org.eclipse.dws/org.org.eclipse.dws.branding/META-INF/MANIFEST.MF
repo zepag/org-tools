@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DWS Feature Branding Plug-in
+Bundle-SymbolicName: org.org.eclipse.dws.branding;singleton:=true
+Bundle-Version: 1.3.0.qualifier
+Bundle-Vendor: ORG
+Require-Bundle: org.eclipse.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

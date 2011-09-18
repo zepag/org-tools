@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG Bundles Repository Crawler
+Bundle-SymbolicName: org.org.bundles.repository.crawler
+Bundle-Version: 1.3.0.qualifier
+Export-Package: org.org.repository.crawler,
+ org.org.repository.crawler.items,
+ org.org.repository.crawler.items.immutable,
+ org.org.repository.crawler.items.mutable,
+ org.org.repository.crawler.mapping,
+ org.org.repository.crawler.maven2,
+ org.org.repository.crawler.maven2.model,
+ org.org.repository.crawler.maven2.model.protocolplugins
+Require-Bundle: org.org.bundles.model;visibility:=reexport,
+ org.apache.commons.logging,
+ org.apache.commons.httpclient,
+ org.apache.commons.codec
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

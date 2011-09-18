@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cheat sheet IDE Commands Plug-in
+Bundle-SymbolicName: org.org.eclipse.cheatsheet.commands.ide;singleton:=true
+Bundle-Version: 1.3.0.qualifier
+Bundle-Vendor: ORG
+Require-Bundle: org.org.eclipse.core.utils.platform,
+ org.org.eclipse.core.ui
+Export-Package: org.org.eclipse.cheatsheet.commands.handlers
+Bundle-Activator: org.org.eclipse.cheatsheet.commands.CheatSheetIdeCommandsPlugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

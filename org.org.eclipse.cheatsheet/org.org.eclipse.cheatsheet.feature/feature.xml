@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.org.eclipse.cheatsheet"
+      label="ORG CheatSheet Feature"
+      version="1.3.0.qualifier"
+      provider-name="ORG"
+      plugin="org.org.eclipse.cheatsheet"
+      image="dws_banner.gif">
+   <install-handler/>
+
+   <description url="http://www.org-tools.org/eclipse-dws/index.html">
+      The ORG CheatSheet feature consists in:
+- a plugin providing a catalog view and extension points allowing to browse cheatsheets.
+- a plugin providing useful commands for cheatsheet editors.
+   </description>
+
+   <copyright url="http://www.org-tools.org/eclipse-dws/copyright.html">
+      Copyright ORG 2007. See http://www.org-tools.org/eclipse-dws/copyright.html.
+   </copyright>
+
+   <license url="http://www.org-tools.org/eclipse-dws/license.html">
+      Licensed under the EPL.
+See http://www.org-tools.org/eclipse-dws/license.html.
+   </license>
+
+   <url>
+      <update label="ORG Tools Stable Releases" url="http://www.org-tools.org/updatesites/stable/3.3/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.org.eclipse.core.utils.platform"/>
+      <import plugin="org.eclipse.ui.cheatsheets"/>
+      <import plugin="org.org.bundles.model"/>
+      <import plugin="org.eclipse.core.net"/>
+   </requires>
+
+   <plugin
+         id="org.org.eclipse.cheatsheet.catalog"
+         download-size="0"
+         install-size="0"
+         version="1.3.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.org.eclipse.cheatsheet.commands"
+         download-size="0"
+         install-size="0"
+         version="1.3.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.org.eclipse.cheatsheet"
+         download-size="0"
+         install-size="0"
+         version="1.3.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.org.eclipse.cheatsheet.help"
+         download-size="0"
+         install-size="0"
+         version="1.3.0.qualifier"/>
+
+   <plugin
+         id="org.org.eclipse.cheatsheet.commands.ide"
+         download-size="0"
+         install-size="0"
+         version="1.3.0.qualifier"
+         unpack="false"/>
+
+</feature>

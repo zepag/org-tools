@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="org.org.eclipse.cheatsheet.catalog.CheatSheetCatalogContribution" name="CheatSheetCatalogContribution" schema="schemas/CheatSheetCatalogContribution.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.org.eclipse.ui.views"
+            class="org.org.eclipse.cheatsheet.catalog.internal.views.CheatSheetCatalogView"
+            icon="icons/cheatsheetcatalog.gif"
+            id="org.org.eclipse.cheatsheet.catalog.internal.views.CheatSheetCatalogView"
+            name="Cheat Sheet Catalog View">
+      </view>
+      <category
+            id="org.org.eclipse.ui.views"
+            name="ORG">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.org.eclipse.cheatsheet.catalog.internal.handlers.OpenCatalogsViewHandler"
+            description="This opens the Cheat Sheet Catalogs&apos; View"
+            id="org.org.eclipse.cheatsheet.catalog.openCatalogsViewCommand"
+            name="Open CheatSheet Catalogs&apos; View">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.org.eclipse.cheatsheet.menu">
+         <command
+               commandId="org.org.eclipse.cheatsheet.catalog.openCatalogsViewCommand"
+               icon="icons/cheatsheetcatalog.gif">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+            <toolbar
+                  id="org.org.eclipse.cheatsheet.catalog.toolbar1">
+                  <command
+            	   commandId="org.org.eclipse.cheatsheet.catalog.openCatalogsViewCommand"
+               icon="icons/cheatsheetcatalog.gif">
+      		   </command>
+      
+            </toolbar>
+         </menuContribution>
+   </extension>
+   
+</plugin>

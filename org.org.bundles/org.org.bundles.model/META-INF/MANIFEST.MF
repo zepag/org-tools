@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG Bundles Model
+Bundle-SymbolicName: org.org.bundles.model
+Bundle-Version: 1.3.0.qualifier
+Export-Package: org.org.model
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

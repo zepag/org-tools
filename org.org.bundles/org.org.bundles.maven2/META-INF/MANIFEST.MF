@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG Bundles Maven 2
+Bundle-SymbolicName: org.org.bundles.maven2
+Bundle-Version: 1.3.0.qualifier
+Export-Package: org.org.maven2
+Require-Bundle: org.org.bundles.repository.crawler
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ORG CheatSheet Samples (Optional)
+Bundle-SymbolicName: org.org.eclipse.cheatsheet.samples;singleton:=true
+Bundle-Version: 1.3.0.qualifier
+Bundle-Vendor: ORG
+Require-Bundle: org.org.eclipse.cheatsheet.catalog
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
