@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?pde version="3.1"?>
+<?pde version="3.5"?>
 
-<product name="ORG CheatSheet RCP" id="org.org.eclipse.rcp.cheatsheet.product" application="org.org.eclipse.rcp.cheatsheet.application" useFeatures="false">
+<product name="ORG CheatSheet RCP" uid="org.org.eclipse.rcp.cheatsheet.product" id="org.org.eclipse.rcp.cheatsheet.product" application="org.org.eclipse.rcp.cheatsheet.application" version="1.3.0.qualifier" useFeatures="false" includeLaunchers="true">
 
-   <configIni use="default"/>
+   <configIni use="default">
+   </configIni>
 
    <launcherArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
@@ -65,13 +66,14 @@
       <plugin id="org.eclipse.update.core"/>
       <plugin id="org.eclipse.update.core.win32" fragment="true"/>
       <plugin id="org.eclipse.update.ui"/>
-      <plugin id="org.mortbay.jetty"/>
+      <plugin id="org.mortbay.jetty" fragment=""/>
       <plugin id="org.org.eclipse.cheatsheet.catalog"/>
       <plugin id="org.org.eclipse.cheatsheet.commands"/>
       <plugin id="org.org.eclipse.core.ui"/>
       <plugin id="org.org.eclipse.core.utils.platform"/>
       <plugin id="org.org.eclipse.rcp.cheatsheet"/>
-      <plugin id="org.org.lib.model"/>
+      <plugin id="org.org.lib.model" fragment=""/>
    </plugins>
+
 
 </product>

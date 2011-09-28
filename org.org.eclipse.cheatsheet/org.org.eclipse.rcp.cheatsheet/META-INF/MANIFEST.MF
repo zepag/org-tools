@@ -11,7 +11,7 @@ Require-Bundle: org.eclipse.ui.cheatsheets,
  org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.help.ui
-Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy
 Export-Package: org.org.eclipse.rcp.cheatsheet;
   uses:="org.eclipse.jface.action,
    org.eclipse.jface.resource,
@@ -20,3 +20,4 @@ Export-Package: org.org.eclipse.rcp.cheatsheet;
    org.eclipse.equinox.app,
    org.eclipse.ui.plugin,
    org.osgi.framework"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

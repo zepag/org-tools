@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.cheatsheet.branding"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.cheatsheet.catalog"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.cheatsheet.commands"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.cheatsheet.commands.ide"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.core.branding"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.core.ui"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.core.utils.jdt"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.core.utils.platform"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.dws.branding"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.dws.core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.helpers.branding"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.helpers.core"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.eclipse.helpers.ui"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.lib.maven2"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.lib.model"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/org.org.lib.repository.crawler"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="src" path="src/"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

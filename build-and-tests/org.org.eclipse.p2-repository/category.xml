@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.org.eclipse.cheatsheet_1.3.0.qualifier.jar" id="org.org.eclipse.cheatsheet" version="1.3.0.qualifier">
+      <category name="org.org.eclipse.features.category"/>
+   </feature>
+   <feature url="features/org.org.eclipse.dws_1.3.0.qualifier.jar" id="org.org.eclipse.dws" version="1.3.0.qualifier">
+      <category name="org.org.eclipse.features.category"/>
+   </feature>
+   <feature url="features/org.org.eclipse.core.feature_1.3.0.qualifier.jar" id="org.org.eclipse.core.feature" version="1.3.0.qualifier">
+      <category name="org.org.eclipse.enablers.category"/>
+   </feature>
+   <feature url="features/org.org.eclipse.helpers_1.3.0.qualifier.jar" id="org.org.eclipse.helpers" version="1.3.0.qualifier">
+      <category name="org.org.eclipse.features.category"/>
+   </feature>
+   <feature url="features/org.org.eclipse.addons_1.3.0.qualifier.jar" id="org.org.eclipse.addons" version="1.3.0.qualifier">
+      <category name="org.org.eclipse.optional.category"/>
+   </feature>
+   <category-def name="org.org.eclipse.features.category" label="ORG Original Features"/>
+   <category-def name="org.org.eclipse.enablers.category" label="ORG enablement features"/>
+   <category-def name="org.org.eclipse.optional.category" label="ORG optional features"/>
+</site>

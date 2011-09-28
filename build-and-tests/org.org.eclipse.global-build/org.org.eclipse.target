@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="ORG Eclipse Target" sequenceNumber="15">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.wst.common.fproj.feature.group" version="3.3.0.v201102150115-377DF8s7355397B4B9B"/>
+<repository location="http://download.eclipse.org/releases/indigo"/>
+</location>
+<location path="${project_loc:org.org.eclipse.global-build}/target-data/eclipse-delta-pack/eclipse" type="Directory"/>
+<location path="${project_loc:org.org.eclipse.global-build}/target-data/eclipse-rcp/eclipse" type="Directory"/>
+</locations>
+</target>

@@ -34,7 +34,6 @@ import javax.xml.stream.events.XMLEvent;
 
 public class StaxProjectFileModifier implements IProjectFileModifier {
 
-	@SuppressWarnings("unchecked")
 	public void modifyProjectFile(File file) throws IOException {
 		File backupFile = new File(file.getAbsolutePath() + ".backup." + new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date(System.currentTimeMillis())));
 		copy(file, backupFile);

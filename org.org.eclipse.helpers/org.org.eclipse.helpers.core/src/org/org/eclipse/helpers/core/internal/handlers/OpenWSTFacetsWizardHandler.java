@@ -66,7 +66,6 @@ public class OpenWSTFacetsWizardHandler extends AbstractExtendedHandler<Object> 
 	/**
 	 * the command has been executed, so extract extract the needed information from the application context.
 	 */
-	@SuppressWarnings("unchecked")
 	public Object doExecute(ExecutionEvent event, org.org.eclipse.core.utils.platform.commands.handlers.IExecutionSavedContext executionSavedContext) throws ExtendedHandlerExecutionException {
 		IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
 		Set<IProject> projects = new HashSet<IProject>();
@@ -76,7 +75,7 @@ public class OpenWSTFacetsWizardHandler extends AbstractExtendedHandler<Object> 
 			ISelection selection = HandlerUtil.getCurrentSelection(event);
 			if (selection != null && selection instanceof IStructuredSelection) {
 				IStructuredSelection structuredSelection = (IStructuredSelection) selection;
-				for (Iterator it = structuredSelection.iterator(); it.hasNext();) {
+				for (Iterator<?> it = structuredSelection.iterator(); it.hasNext();) {
 					Object selectedObject = it.next();
 					if (IProject.class.isAssignableFrom(selectedObject.getClass())) {
 						projects.add((IProject) selectedObject);
@@ -96,7 +95,7 @@ public class OpenWSTFacetsWizardHandler extends AbstractExtendedHandler<Object> 
 					ProjectChoicePromptDialog userPromptDialog = new ProjectChoicePromptDialog(HandlerUtil.getActiveShell(event), workspaceProjectsWithFacets);
 					userPromptDialog.setValidator(new IFieldsValidator() {
 
-						@SuppressWarnings("unchecked")
+						@SuppressWarnings("rawtypes")
 						public IValidationResult validate(Map<IFieldIdentifier, IFieldValueHolder> fieldValueHolders) {
 							StringBuilderValidationResult validationResult = new StringBuilderValidationResult();
 							String[] chosenProjects = (String[]) fieldValueHolders.get(ProjectChoicePromptDialog.CHOSEN_PROJECT_FIELD).getValue();

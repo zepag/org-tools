@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="default">
+	<propertyfile file="build-target-data.properties" />
+	
+	<target name="default" description="Default task" depends="create-download-path,download-eclipse,download-deltapack">
+		<echo>BUILD SUCCESSFUL!</echo>
+	</target>
+
+	<target name="check-download-path-present" unless="downloadpath.present">
+		<available file="${mytarget.download.path}/${mytarget.eclipse.file}" property="eclipse.present" />
+	</target>
+	<target name="check-eclipse-present" unless="eclipse.present">
+		<available file="${mytarget.download.path}/${mytarget.eclipse.file}" property="eclipse.present" />
+	</target>
+	<target name="check-deltapack-present" unless="deltapack.present">
+		<available file="${mytarget.download.path}/${mytarget.deltapack.file}" property="deltapack.present" />
+	</target>
+	<target name="create-download-path" depends="check-download-path-present" unless="downloadpath.present">
+		<mkdir dir="${mytarget.download.path}" />
+	</target>
+	<target name="download-eclipse" depends="check-eclipse-present" unless="eclipse.present">
+		<get dest="${mytarget.download.path}/${mytarget.eclipse.file}" src="${mytarget.eclipse.url}${mytarget.eclipse.file}" />
+		<mkdir dir="${mytarget.download.path}/${mytarget.eclipse.folder}" />
+		<untar compression="gzip" src="${mytarget.download.path}/${mytarget.eclipse.file}" dest="${mytarget.download.path}/${mytarget.eclipse.folder}" overwrite="no" />
+	</target>
+	<target name="download-deltapack" depends="check-deltapack-present" unless="deltapack.present">
+		<get dest="${mytarget.download.path}/${mytarget.deltapack.file}" src="${mytarget.deltapack.url}${mytarget.deltapack.file}" />
+		<mkdir dir="${mytarget.download.path}/${mytarget.deltapack.folder}" />
+		<unzip src="${mytarget.download.path}/${mytarget.deltapack.file}" dest="${mytarget.download.path}/${mytarget.deltapack.folder}" overwrite="no" />
+	</target>
+</project>
