@@ -18,6 +18,7 @@
 		<module>../../org.org.eclipse.cheatsheet/org.org.eclipse.cheatsheet.build/</module>
 		<module>../../org.org.eclipse.dws/org.org.eclipse.dws.build/</module>
 		<module>../../org.org.eclipse.addons/org.org.eclipse.addons.build/</module>
+		<module>../../org.org.eclipse.helpers/org.org.eclipse.helpers.build/</module>
 		<module>../org.org.eclipse.p2-repository/</module>
 		<module>../org.org.eclipse.test/</module>
 	</modules>
